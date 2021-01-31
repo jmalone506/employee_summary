@@ -1,3 +1,4 @@
-# employee_summary
+# Employee_Summary
 
-# GitHub
+# GitHub Repo Page
+https://github.com/jmalone506/employee_summary
