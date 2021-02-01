@@ -50,11 +50,57 @@ function tMquestions(){
 function managerID(managerAnswers){
     inquirer.prompt([
         {
-            type:'',
-            message:'',
-            
+            type:'input',
+            message:'Office number',
+            name:'officenumber',
+        },
+        {
+            type: 'list',
+            message: 'would you like to add user?',
+            name:'addusers',
+            choices:[
+                "yes",
+                "no",
+            ]
         }
     ])
+    
+function engineerID(engineerAnswers){
+    inquirer.prompt([
+        {
+            type:'input',
+            message:'Your Github account',
+            name:'github',
+        },
+        {
+            type: 'list',
+            message: 'would you like to add user?',
+            name:'adduser',
+            choices:[
+                "yes",
+                "no",
+            ]
+        }
+    ])
+    
+function internsID(internsAnswers){
+    inquirer.prompt([
+        {
+            type:'input',
+            message:'What school did you attend?',
+            name:'school',
+        },
+        {
+            type: 'list',
+            message: 'would you like to add user?',
+            name: 'adduser',
+            choices:[
+                "yes",
+                "no",
+            ]
+        }
+    ])
+    .then()
 }
     
 
