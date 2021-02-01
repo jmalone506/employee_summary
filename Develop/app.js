@@ -26,7 +26,7 @@ function tMquestions(){
         {
             type:'list',
             message: 'what is your Job Title?',
-          name: 'Title',
+          name: 'title',
           choices:[
               "Manager",
               "Engineer",
@@ -64,6 +64,11 @@ function managerID(managerAnswers){
             ]
         }
     ])
+    .then(function(managerAnswers){
+        let newManager = newManager(managerAnswers.name, internsAnswers.id, internsAnswers.title, internsAnswers.school)
+        employee.push(newManager)
+    })
+}
     
 function engineerID(engineerAnswers){
     inquirer.prompt([
@@ -100,7 +105,10 @@ function internsID(internsAnswers){
             ]
         }
     ])
-    .then()
+    .then(function(internsAnswers){
+        let newIntern = newIntern(internsAnswers.name, internsAnswers.id, internsAnswers.title, internsAnswers.school)
+        employee.push(newIntern)
+    })
 }
     
 
