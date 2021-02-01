@@ -65,7 +65,7 @@ function managerID(managerAnswers){
         }
     ])
     .then(function(managerAnswers){
-        let newManager = newManager(managerAnswers.name, internsAnswers.id, internsAnswers.title, internsAnswers.school)
+        let newManager = newManager(managerAnswers.name, managerAnswers.id, managerAnswers.title, managerAnswers.officenumber)
         employee.push(newManager)
     })
 }
@@ -87,6 +87,11 @@ function engineerID(engineerAnswers){
             ]
         }
     ])
+    .then(function(engineerAnswers){
+        let newEngineer = newEngineer(engineerAnswers.name, engineerAnswers.id, engineerAnswers.title, engineerAnswers.github)
+        employee.push(newEngineer)
+    })
+}
     
 function internsID(internsAnswers){
     inquirer.prompt([
