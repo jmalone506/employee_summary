@@ -11,7 +11,7 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 const render = require("./lib/htmlRenderer");
 
 const teamMembers = [];
-function tMquestions(){
+function employeeQuestions(){
     inquirer.prompt([
         {
             type: 'input',
@@ -66,7 +66,7 @@ function managerID(managerAnswers){
     ])
     .then(function(managerAnswers){
         let newManager = newManager(managerAnswers.name, managerAnswers.id, managerAnswers.title, managerAnswers.officenumber)
-        employee.push(newManager)
+        teamMembers.push(newManager)
     })
 }
     
@@ -89,7 +89,7 @@ function engineerID(engineerAnswers){
     ])
     .then(function(engineerAnswers){
         let newEngineer = newEngineer(engineerAnswers.name, engineerAnswers.id, engineerAnswers.title, engineerAnswers.github)
-        employee.push(newEngineer)
+        teamMembers.push(newEngineer)
     })
 }
     
@@ -112,7 +112,7 @@ function internsID(internsAnswers){
     ])
     .then(function(internsAnswers){
         let newIntern = newIntern(internsAnswers.name, internsAnswers.id, internsAnswers.title, internsAnswers.school)
-        employee.push(newIntern)
+        teamMembers.push(newIntern)
     })
 }
     
