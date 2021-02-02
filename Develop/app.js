@@ -44,10 +44,10 @@ function employeeQuestions(){
         else if(answers.Title === "Interns"){
             internsID(answers);
         }
-    })
+    });
 }
 
-function managerID(managerAnswers){
+function managerID(){
     inquirer.prompt([
         {
             type:'input',
@@ -70,7 +70,7 @@ function managerID(managerAnswers){
     })
 }
     
-function engineerID(engineerAnswers){
+function engineerID(){
     inquirer.prompt([
         {
             type:'input',
@@ -93,7 +93,7 @@ function engineerID(engineerAnswers){
     })
 }
     
-function internsID(internsAnswers){
+function internsID(){
     inquirer.prompt([
         {
             type:'input',
