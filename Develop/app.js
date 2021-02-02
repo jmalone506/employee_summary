@@ -65,8 +65,8 @@ function managerID(){
         }
     ])
     .then(function(managerAnswers){
-        let newManager = newManager(managerAnswers.name, managerAnswers.id, managerAnswers.role, managerAnswers.officeNumber)
-        Employee.push(newManager)
+        let createManager = createManager(managerAnswers.name, managerAnswers.id, managerAnswers.role, managerAnswers.officeNumber)
+        Employee.push(createManager)
     })
 }
     
@@ -88,8 +88,8 @@ function engineerID(){
         }
     ])
     .then(function(engineerAnswers){
-        let newEngineer = newEngineer(engineerAnswers.name, engineerAnswers.id, engineerAnswers.role, engineerAnswers.github)
-        Employee.push(newEngineer)
+        let createEngineer = createEngineer(engineerAnswers.name, engineerAnswers.id, engineerAnswers.role, engineerAnswers.github)
+        Employee.push(createEngineer)
     })
 }
     
@@ -111,8 +111,8 @@ function internsID(){
         }
     ])
     .then(function(internsAnswers){
-        let newIntern = newIntern(internsAnswers.name, internsAnswers.id, internsAnswers.role, internsAnswers.school)
-        Employee.push(newIntern)
+        let createIntern = createIntern(internsAnswers.name, internsAnswers.id, internsAnswers.role, internsAnswers.school)
+        Employee.push(createIntern)
     })
 }
     
