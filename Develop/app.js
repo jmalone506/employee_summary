@@ -1,6 +1,6 @@
-const Manager = require("./lib/Manager");
-const Engineer = require("./lib/Engineer");
-const Intern = require("./lib/Intern");
+const Manager = require("Manager.js");
+const Engineer = require("Engineer.js");
+const Intern = require("Intern.js")
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
@@ -65,7 +65,7 @@ function managerID(managerAnswers){
         }
     ])
     .then(function(managerAnswers){
-        let newManager = newManager(managerAnswers.name, managerAnswers.id, managerAnswers.role, managerAnswers.officenumber)
+        let newManager = newManager(managerAnswers.name, managerAnswers.id, managerAnswers.role, managerAnswers.officeNumber)
         Employee.push(newManager)
     })
 }
