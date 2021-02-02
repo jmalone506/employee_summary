@@ -35,13 +35,13 @@ function employeeQuestions(){
         }
     ])
     .then(function(answers){
-        if(answers.Title === "Manager"){
+        if(answers.role === "Manager"){
             managerID(answers);
         }
-        else if (answers.Title === "Engineer"){
+        else if (answers.role === "Engineer"){
             engineerID(answers);
             }
-        else if(answers.Title === "Interns"){
+        else if(answers.role === "Interns"){
             internsID(answers);
         }
     });
