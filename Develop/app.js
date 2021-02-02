@@ -10,7 +10,7 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
-const teamMembers = [];
+const Employee = [];
 function employeeQuestions(){
     inquirer.prompt([
         {
@@ -26,7 +26,7 @@ function employeeQuestions(){
         {
             type:'list',
             message: 'what is your Job Title?',
-          name: 'title',
+          name: 'role',
           choices:[
               "Manager",
               "Engineer",
@@ -65,8 +65,8 @@ function managerID(managerAnswers){
         }
     ])
     .then(function(managerAnswers){
-        let newManager = newManager(managerAnswers.name, managerAnswers.id, managerAnswers.title, managerAnswers.officenumber)
-        teamMembers.push(newManager)
+        let newManager = newManager(managerAnswers.name, managerAnswers.id, managerAnswers.role, managerAnswers.officenumber)
+        Employee.push(newManager)
     })
 }
     
@@ -88,8 +88,8 @@ function engineerID(engineerAnswers){
         }
     ])
     .then(function(engineerAnswers){
-        let newEngineer = newEngineer(engineerAnswers.name, engineerAnswers.id, engineerAnswers.title, engineerAnswers.github)
-        teamMembers.push(newEngineer)
+        let newEngineer = newEngineer(engineerAnswers.name, engineerAnswers.id, engineerAnswers.role, engineerAnswers.github)
+        Employee.push(newEngineer)
     })
 }
     
@@ -111,8 +111,8 @@ function internsID(internsAnswers){
         }
     ])
     .then(function(internsAnswers){
-        let newIntern = newIntern(internsAnswers.name, internsAnswers.id, internsAnswers.title, internsAnswers.school)
-        teamMembers.push(newIntern)
+        let newIntern = newIntern(internsAnswers.name, internsAnswers.id, internsAnswers.role, internsAnswers.school)
+        Employee.push(newIntern)
     })
 }
     
